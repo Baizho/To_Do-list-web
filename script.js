@@ -6,6 +6,7 @@ const storagecart=localStorage.getItem("cart");
 
 function refreshUI(){
   document.getElementById("InputForm").reset();
+  let date=new Date();let day=date.getDate();let month=date.getMonth()+1;let year=date.getFullYear();let hour=date.getHours();let minute=date.getMinutes();
   doListpar.innerHTML="";
   cart.sort();
   localStorage.setItem("cart",JSON.stringify(cart));
