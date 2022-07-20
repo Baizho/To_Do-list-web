@@ -42,19 +42,18 @@ body{
   padding: 5px 5px;
 }
 .Sizebutton {
+  font-size:25px;
   width:30%;
-  font-size:20px;
   margin-top:-2px;
-  margin-bottom:-1px;
+  margin-bottom:-2px;
 }
 #picksort {
   font-size:15px;
 }
 li {
-  padding: 2px 0px 0px 5px;
+  padding: 2px 0px 2px 10px;
   margin:2px;
   width:75%;
-  height:25px;
   font-size:20px;
   background-color:lightgreen;
   border-style:solid;
