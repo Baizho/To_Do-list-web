@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>To-do-list</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -43,25 +43,21 @@
           </div>
         </div>
         <h1 class="center" id="error"></h1>
-        <input type="submit" value="Add Objective" class="center Abuttons"
-          style=" border-radius:10px; font-size:30px" />
+        <input type="submit" value="Add Objective" class="center Abuttons" style=" border-radius:10px; font-size:20px" />
       </form>
       <div class="bg-black">random</div>
       <div class="Flexrow center">
-        <button style="margin-top:20px; margin-bottom:20px; border-radius:10px;" class="Abuttons" type="button"
-          onclick="refreshHistory()">Refresh List</button>
+        <button style="margin-top:35px; margin-bottom:35px; border-radius:10px; font-size:20px" class="Abuttons" type="button"onclick="refreshHistory()">Refresh List</button>
         <h1 style="padding-right:100px; padding-left:100px;">Our To-do list</h1>
-        <button style="margin-top:20px; margin-bottom:20px; border-radius:10px;" class="Dbuttons" type="button"
-          onclick="deleteHistory()">Delete History</button>
+        <button style="margin-top:35px; margin-bottom:35px; border-radius:10px; font-size:20px" class="Dbuttons" type="button" onclick="deleteHistory()">Delete History</button>
       </div>
-      <br>
       <form onsubmit="return Applysort(this)" style="font-size:25px" class="center">
-        <label for="picksort">Choose sort option:</label>
+        <label style="font-size:20px" for="picksort">Choose sort option:</label>
         <select id="picksort">
           <option value="CtoF">Closest -> Furthest </option>
           <option value="FtoC">Furthest -> Closest </option>
         </select>
-        <input style="border-radius:10px; font-size:20px; background-color:blue; color:white" type="submit"
+        <input style="border-radius:10px; font-size:15px; background-color:blue; color:white" type="submit"
           value="Apply option"></input>
       </form>
 

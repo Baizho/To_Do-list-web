@@ -16,41 +16,42 @@ body{
   justify-content: space-between;
 }
 #Objective {
+  box-sizing:border-box;
   width:100%;
   border-radius:6px;
-  padding: 10px 5px;
+  padding: 5px 5px;
 }
 #Deadlineminute {
   border-radius:6px;
-  padding: 10px 5px;
+  padding: 5px 5px;
 }
 #Deadlinehour {
   border-radius:6px;
-  padding: 10px 5px;
+  padding: 5px 5px;
 }
 #Deadlineday {
   border-radius:6px;
-  padding: 10px 5px;
+  padding: 5px 5px;
 }
 #Deadlinemonth {
   border-radius:6px;
-  padding: 10px 5px;
+  padding: 5px 5px;
 }
 #Deadlineyear {
   border-radius:6px;
-  padding: 10px 5px;
+  padding: 5px 5px;
 }
 .Sizebutton {
   font-size:25px;
   width:30%;
-  margin-top:-5px;
-  margin-bottom:-5px;
+  margin-top:-2px;
+  margin-bottom:-2px;
 }
 #picksort {
-  font-size:20px;
+  font-size:15px;
 }
 li {
-  padding: 5px 0px 5px 10px;
+  padding: 2px 0px 2px 10px;
   margin:2px;
   width:75%;
   font-size:25px;
@@ -88,7 +89,7 @@ button{
     "left middle right"
     "left middle right";
   grid-gap:5px;
-  grid-template-columns:0.5fr auto 0.5fr;
+  grid-template-columns:0.2fr auto 0.2fr;
   grid-template-rows:auto auto auto;
 }
 #left {

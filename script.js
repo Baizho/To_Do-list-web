@@ -51,7 +51,12 @@ function refreshUI() {
     const Name = info.name; const Seconds = info.seconds; const Minute = info.minute; const Hour = info.hour;
     const Day = info.day; const Month = info.month; const Year = info.year;
     const listinfo = document.createElement("li");
-    const listtext = document.createTextNode(`Name: ${Name}  Deadline: ${Hour}:${Minute} | ${Year}/${Month}/${Day}`);
+    let thehour=String(Hour),theminute=String(Minute),themonth=String(Month),theday=String(Day);
+    if(thehour.length===1)thehour="0"+thehour;
+    if(theminute.length===1)theminute="0"+theminute;
+    if(theday.length===1)theday="0"+theday;
+    if(themonth.length===1)themonth="0"+themonth;
+    const listtext = document.createTextNode(`Name: ${Name} --- Deadline: ${thehour}:${theminute} | ${Year}/${themonth}/${theday}`);
     listinfo.appendChild(listtext);
     doListpar.appendChild(listinfo);
     listinfo.classList.add("Flexrow", "Jbetween");
