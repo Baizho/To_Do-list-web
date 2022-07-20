@@ -10,46 +10,64 @@
 
 <body>
   <h1 class="center"> To-do list</h1>
-  <div class="bg-black">random</div>
-  <form onsubmit="return Submitted(this)" class="MainSize center" id="InputForm">
-    <div class="Flexcol center">
-      <label for="Objective">Objective: <br></label>
-      <input id="Objective" type="text" value="" placeholder="To-do Name" required/>
-    </div>
-    <div class="Flexrow center">
-      <div class="Flexcol">
-        <label for="Deadlineminute">Deadlineminute <br></label>
-        <input id="Deadlineminute" type="text" value="" placeholder="DeadlineMinute 0-59" required />
+  <div id="container">
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="middle">
+      <div class="bg-black">random</div>
+      <form onsubmit="return Submitted(this)" class="MainSize center" id="InputForm">
+        <div class="Flexcol center">
+          <label for="Objective"><strong>Objective:</strong><br></label>
+          <input id="Objective" type="text" value="" placeholder="To-do Name" required />
+        </div>
+        <div class="Flexrow center">
+          <div class="Flexcol">
+            <label for="Deadlineminute">D.L minute <br></label>
+            <input id="Deadlineminute" type="text" value="" placeholder="DeadlineMinute 0-59" required />
+          </div>
+          <div class="Flexcol">
+            <label for="Deadlinehour">D.L hour <br></label>
+            <input id="Deadlinehour" type="text" value="" placeholder="Deadlinehour 0-23" required />
+          </div>
+          <div class="Flexcol">
+            <label for="Deadlineday">D.L day <br></label>
+            <input id="Deadlineday" type="text" value="" placeholder="Deadlineday" required />
+          </div>
+          <div class="Flexcol">
+            <label for="Deadlinemonth">D.L month <br></label>
+            <input id="Deadlinemonth" type="text" value="" placeholder="Deadlinemonth 1-12" required />
+          </div>
+          <div class="Flexcol">
+            <label for="Deadlineyear">D.L year <br></label>
+            <input id="Deadlineyear" type="text" value="" placeholder="Deadlineyear" required />
+          </div>
+        </div>
+        <h1 class="center" id="error"></h1>
+        <input type="submit" value="Add Objective" class="center Abuttons"
+          style=" border-radius:10px; font-size:30px" />
+      </form>
+      <div class="bg-black">random</div>
+      <div class="Flexrow center">
+        <button style="margin-top:20px; margin-bottom:20px; border-radius:10px;" class="Abuttons" type="button"
+          onclick="refreshHistory()">Refresh List</button>
+        <h1 style="padding-right:100px; padding-left:100px;">Our To-do list</h1>
+        <button style="margin-top:20px; margin-bottom:20px; border-radius:10px;" class="Dbuttons" type="button"
+          onclick="deleteHistory()">Delete History</button>
       </div>
-      <div class="Flexcol">
-        <label for="Deadlinehour">Deadlinehour <br></label>
-        <input id="Deadlinehour" type="text" value="" placeholder="Deadlinehour 0-23" required />
-      </div>
-      <div class="Flexcol">
-        <label for="Deadlineday">Deadlineday <br></label>
-        <input id="Deadlineday" type="text" value="" placeholder="Deadlineday" required />
-      </div>
-      <div class="Flexcol">
-        <label for="Deadlinemonth">Deadlinemonth <br></label>
-        <input id="Deadlinemonth" type="text" value="" placeholder="Deadlinemonth 1-12" required />
-      </div>
-      <div class="Flexcol">
-        <label for="Deadlineyear">Deadlineyear <br></label>
-        <input id="Deadlineyear" type="text" value="" placeholder="Deadlineyear" required />
-      </div>
-    </div>
-    <br>
-    <input type="submit" value="Add Objective" class="center Abuttons" style="font-size:30px" />
-  </form>
-  <div class="center"><button class="Abuttons" type="button" onclick="refreshHistory()">Refresh History</button></div>
-  <br>
-  <div class="center"><button class="Dbuttons" type="button" onclick="deleteHistory()">Delete History</button></div>
-  
-  <h1 class="center" id="error"></h1>
-  <div class="bg-black">random</div>
-  <h1 class="center">Our To-do list</h1>
-  <ul id="doList"></ul>
+      <br>
+      <form onsubmit="return Applysort(this)" style="font-size:25px" class="center">
+        <label for="picksort">Choose sort option:</label>
+        <select id="picksort">
+          <option value="CtoF">Closest -> Furthest </option>
+          <option value="FtoC">Furthest -> Closest </option>
+        </select>
+        <input style="border-radius:10px; font-size:20px; background-color:blue; color:white" type="submit"
+          value="Apply option"></input>
+      </form>
 
+      <ul id="doList" class=Flexcol></ul>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 
