@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>To-do-list</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -43,14 +44,22 @@
           </div>
         </div>
         <h1 class="center" id="error"></h1>
-        <input type="submit" value="Add Objective" class="center Abuttons" style=" border-radius:10px; font-size:20px" />
+        <input type="submit" value="Add Objective" class="center Abuttons"
+          style=" border-radius:10px; font-size:20px" />
       </form>
       <div class="bg-black">random</div>
       <div class="Flexrow center">
-        <button style="margin-top:35px; margin-bottom:35px; border-radius:10px; font-size:20px" class="Abuttons" type="button"onclick="refreshHistory()">Refresh List</button>
+        <button style="margin-top:35px; margin-bottom:35px; border-radius:10px; font-size:20px" class="Abuttons"
+          type="button" onclick="refreshHistory()">Refresh List</button>
         <h1 style="padding-right:100px; padding-left:100px;">Our To-do list</h1>
-        <button style="margin-top:35px; margin-bottom:35px; border-radius:10px; font-size:20px" class="Dbuttons" type="button" onclick="deleteHistory()">Delete History</button>
+        <button style="margin-top:35px; margin-bottom:35px; border-radius:10px; font-size:20px" class="Dbuttons"
+          type="button" onclick="deleteHistory()">Delete History</button>
       </div>
+      <form class="center">
+        <i class="fa fa-search"></i>
+        <input list="searchoptions" type="text" oninput="Changesearch(this)"></input>
+        <datalist id="searchoptions"></datalist>
+      </form>
       <form onsubmit="return Applysort(this)" style="font-size:25px" class="center">
         <label style="font-size:20px" for="picksort">Choose sort option:</label>
         <select id="picksort">

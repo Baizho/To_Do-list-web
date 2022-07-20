@@ -89,7 +89,7 @@ button{
     "left middle right"
     "left middle right";
   grid-gap:5px;
-  grid-template-columns:0.2fr auto 0.2fr;
+  grid-template-columns:0.5fr auto 0.5fr;
   grid-template-rows:auto auto auto;
 }
 #left {
