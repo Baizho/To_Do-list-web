@@ -41,6 +41,18 @@ body{
   border-radius:6px;
   padding: 5px 5px;
 }
+#bariconsec:hover {
+  transform: rotate(90deg);
+}
+#bariconsec {
+  transition:transform 1s;
+}
+#showproj {
+  position:absolute;
+  width:100%;
+  height:250px;
+  background-color:whitesmoke;
+}
 .Sizebutton {
   font-size:25px;
   width:30%;
