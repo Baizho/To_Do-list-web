@@ -4,7 +4,7 @@ let thesortoption = "CtoF";
 let searchitem = "";
 
 const doListpar = document.getElementById("doList");
-const storagecart = localStorage.getItem("cart");
+const storagecart = localStorage.getItem("todocart");
 
 $("#baricon").mouseenter(() => {
   const parshowproj=document.getElementById("showproj");
@@ -71,7 +71,7 @@ function refreshUI() {
   doListpar.innerHTML = "";
   if (thesortoption === "CtoF") { sortCtoF(); }
   if (thesortoption === "FtoC") { sortFtoC(); }
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("todocart", JSON.stringify(cart));
   let cnt=0;
   cart.forEach((info, index) => {
     const Name = info.name; const Seconds = info.seconds; const Minute = info.minute; const Hour = info.hour;
