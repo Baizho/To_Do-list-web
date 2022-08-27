@@ -6,20 +6,6 @@ let searchitem = "";
 const doListpar = document.getElementById("doList");
 const storagecart = localStorage.getItem("todocart");
 
-$("#baricon").mouseenter(() => {
-  const parshowproj=document.getElementById("showproj");
-  if(parshowproj.style.display==="block") {
-    parshowproj.style.display="none";
-  }
-   else {
-      parshowproj.style.display="block";
-    }
-});
-$("#showproj").mouseleave(() => {
-  const parshowproj=document.getElementById("showproj");
-  parshowproj.style.display="none";
-});
-
 class Item {
   constructor(name, seconds, minute, hour, day, month, year) {
     this.name = name;
